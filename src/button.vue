@@ -1,6 +1,7 @@
 <template>
   <button class="g-button" :class="{[`icon-${iconPosition}`]: true}">
-    <g-icon v-if="icon" :name="icon" class="icon"></g-icon>
+    <g-icon :name="icon" class="icon" v-if="icon"></g-icon>
+    <g-icon name="loading" class="loading"></g-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -23,6 +24,10 @@
 </script>
 
 <style lang="scss">
+  @keyframes spin {
+    0% { tramsform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
   .g-button {
     font-size: var(--font-size);
     height: var(--button-height);
@@ -34,31 +39,15 @@
     justify-content: center;
     align-items: center;
     vertical-align: middle;
-    &:hover {
-      border-color: var(--border-color-hover);
-    }
-    &:active {
-      background: var(--button-active-bg);
-    }
-    &:focus {
-      outline: none;
-    }
-    > .icon {
-      order: 1;
-      margin-right: .3em;
-    }
-    > .content {
-      order: 2;
-    }
+    &:hover {border-color: var(--border-color-hover);}
+    &:active {background: var(--button-active-bg);}
+    &:focus {outline: none;}
+    > .icon {order: 1;margin-right: .3em;}
+    > .content {order: 2;}
     &.icon-right {
-      > .icon {
-        order: 2;
-        margin-right: 0;
-        margin-left: .3em;
-      }
-      > .content {
-        order: 1;
-      }
+      > .icon {order: 2;margin-right: 0;margin-left: .3em;}
+      > .content {order: 1;}
     }
+    .loading { animation: spin .6s infinite linear;}
   }
 </style>
