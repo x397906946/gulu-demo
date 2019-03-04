@@ -2,7 +2,7 @@
   "name": "mrx-test-1",
   "version": "0.0.1",
   "description": "这是一简易UI 框架\u001b[D\u001b[D\u001b[\u001b[C\u001b[C\u001b框架",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "dev-test": "parcel watch test/* --no-cache & karma start",
     "test": "parcel build test/* --no-cache --no-minify && karma start --single-run"
