@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93d2dd85-9f0f-4605-a210-ef1a43c45274" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gulu-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gulu-demo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,8 +20,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="253">
-                <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+              <first_editor relative-caret-position="575">
+                <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
               </first_editor>
               <second_editor />
             </state>
@@ -167,7 +165,7 @@
       <workItem from="1551752427446" duration="37000" />
       <workItem from="1551752493974" duration="21000" />
       <workItem from="1551784434572" duration="414000" />
-      <workItem from="1551835780910" duration="267000" />
+      <workItem from="1551835780910" duration="680000" />
     </task>
     <task id="LOCAL-00001" summary="npm install vue">
       <created>1551439665408</created>
@@ -267,11 +265,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551582794447</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="更新 README.md">
+      <created>1551836310816</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1551836310816</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35294000" />
+    <option name="totallyTimeSpent" value="35707000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
@@ -316,7 +321,8 @@
     <MESSAGE value="第一个元素不需要margin -1px" />
     <MESSAGE value="hover边框颜色设为红色" />
     <MESSAGE value="使用chai构建五个测试案例" />
-    <option name="LAST_COMMIT_MESSAGE" value="使用chai构建五个测试案例" />
+    <MESSAGE value="更新 README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新 README.md" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/button.js" />
@@ -420,8 +426,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="253">
-            <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <first_editor relative-caret-position="575">
+            <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
           </first_editor>
           <second_editor />
         </state>
