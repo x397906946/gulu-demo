@@ -44,7 +44,7 @@ describe('Row', () => {
     document.body.appendChild(div)
     const vm = new Constructor({
       propsData: {
-        icon: 'center'
+        align: 'center'
       }
     }).$mount(div)
     const element = vm.$el
