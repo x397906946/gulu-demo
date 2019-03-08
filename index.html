@@ -19,7 +19,6 @@
             --border-color-hover: red;
         }
         #app {
-            margin: 20px;
         }
         body {
             font-size: var(--font-size);
@@ -27,11 +26,21 @@
     </style>
 </head>
 <body>
+<style>
+  .demo {
+    border: 1px solid #666;
+    min-height: 100px;
+  }
+</style>
 <div id="app">
-  <g-layout>
-    <g-header></g-header>
-    <g-content></g-content>
-    <g-footer></g-footer>
+  <g-layout style="height: 100vh;">
+
+    <g-header class="demo">header</g-header>
+    <g-layout>
+      <g-content class="demo">content</g-content>
+      <g-sider class="demo">sider</g-sider>
+    </g-layout>
+    <g-footer class="demo">footer</g-footer>
   </g-layout>
 </div>
 
