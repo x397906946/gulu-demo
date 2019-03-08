@@ -1,5 +1,5 @@
 <template>
-  <transition name="fade">
+  <transition name="slide">
     <div class="sider" v-if="visible">
       <slot></slot>
       <button @click="visible = false">close</button>
@@ -26,10 +26,10 @@
       right: 0;
     }
   }
-  .fade-enter-active, .fade-leave-active {
+  .slide-enter-active, .slide-leave-active {
     transition: all .5s;
   }
-  .fade-enter, .fade-leave-to {
+  .slide-enter, .slide-leave-to {
     margin-left: -200px;
   }
 </style>
