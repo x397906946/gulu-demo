@@ -36,12 +36,20 @@ new Vue({
     message: 'hi'
   },
   created(){
+    this.$toast('你的智商需要充值!', {
+      position: 'middle',
+      enableHtml: false,
+      closeButton: {
+        text: '已充值',
+        callback(){
+          console.log('他说已经充值了！')
+        }
+      },
+      autoClose: true,
+      autoCloseDelay: 3
+    })
   },
   methods: {
-    showToast(){
-      this.$toast('很多很文字', {
-        enableHtml: false
-      })
-    }
+    showToast(){}
   }
 })
