@@ -1,10 +1,10 @@
 <template>
-  <div class="footer">
+  <div class="slider">
     <slot></slot>
   </div>
 </template>
 
 <style lang="scss" scoped>
-  .footer {
+  .slider {
   }
 </style>

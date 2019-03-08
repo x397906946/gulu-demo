@@ -5,6 +5,10 @@ import ButtonGroup from  './button-group'
 import Input from './input'
 import Row from './row'
 import Col from './col'
+import Layout from './layout'
+import Header from './header'
+import Content from './content'
+import Footer from './footer'
 
 Vue.component('g-button', Button)
 Vue.component('g-icon', Icon)
