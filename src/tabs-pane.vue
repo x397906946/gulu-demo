@@ -36,6 +36,6 @@
 
 <style scoped lang="scss">
   .tabs-pane {
-    padding: 0 1em;
+    padding: 1em;
   }
 </style>
