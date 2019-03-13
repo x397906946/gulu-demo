@@ -16,9 +16,12 @@
     props: {
       position: {
         type: String,
-        default: 'top',
+        default: 'oneClock',
         validator (value) {
-          return ['top', 'bottom', 'left', 'right'].indexOf(value) >= 0
+          return [
+            'oneClock', 'twoClock', 'threeClock', 'fourClock', 'fiveClock', 'sixClock',
+            'sevenClock', 'eightClock', 'nineClock', 'tenClock', 'elevenClock', 'twelveClock'
+          ].indexOf(value) >= 0
         }
       },
       trigger: {
@@ -83,18 +86,20 @@
         const {contentWrapper, triggerWrapper} = this.$refs
         document.body.appendChild(contentWrapper)
         const {width, height, top, left} = triggerWrapper.getBoundingClientRect()
-        const {height: height2} = contentWrapper.getBoundingClientRect()
+        const {height: height2, width: width2} = contentWrapper.getBoundingClientRect()
         let positions = {
-          top: {top: top + window.scrollY, left: left + window.scrollX,},
-          bottom: {top: top + height + window.scrollY, left: left + window.scrollX},
-          left: {
-            top: top + window.scrollY + (height - height2) / 2,
-            left: left + window.scrollX
-          },
-          right: {
-            top: top + window.scrollY + (height - height2) / 2,
-            left: left + window.scrollX + width
-          },
+          elevenClock: {top: top + window.scrollY, left: left + window.scrollX + width - width2},
+          twelveClock: {top: top + window.scrollY, left: left + window.scrollX + (width - width2) / 2},
+          oneClock: {top: top + window.scrollY, left: left + window.scrollX},
+          twoClock: {top: top + window.scrollY , left: left + window.scrollX + width},
+          threeClock: {top: top + window.scrollY + (height - height2) / 2, left: left + window.scrollX + width},
+          fourClock: {top: top + window.scrollY + height - height2, left: left + window.scrollX + width},
+          fiveClock: {top: top + height + window.scrollY, left: left + window.scrollX + width - width2},
+          sixClock: {top: top + height + window.scrollY, left: left + window.scrollX + (width - width2) / 2},
+          sevenClock: {top: top + height + window.scrollY, left: left + window.scrollX},
+          eightClock: {top: top + window.scrollY + height - height2, left: left + window.scrollX},
+          nineClock: {top: top + window.scrollY + (height - height2) / 2, left: left + window.scrollX},
+          tenClock: {top: top + window.scrollY, left: left + window.scrollX}
         }
         contentWrapper.style.left = positions[this.position].left + 'px'
         contentWrapper.style.top = positions[this.position].top + 'px'
@@ -157,12 +162,9 @@
       height: 0;
       position: absolute;
     }
-    &.position-top {
+    &.position-elevenClock, &.position-twelveClock, &.position-oneClock {
       transform: translateY(-100%);
       margin-top: -10px;
-      &::before, &::after {
-        left: 10px;
-      }
       &::before {
         border-top-color: black;
         border-bottom: none;
@@ -174,11 +176,54 @@
         top: calc(100% - 1px);
       }
     }
-    &.position-bottom {
-      margin-top: 10px;
+    &.position-elevenClock {
       &::before, &::after {
-        left: 10px;
+        right: 1.2em;
       }
+    }
+    &.position-twelveClock {
+      &::before, &::after {
+        left: calc(50% - .6em);
+      }
+    }
+    &.position-oneClock {
+      &::before, &::after {
+        left: 1.2em;
+      }
+    }
+    &.position-twoClock, &.position-threeClock, &.position-fourClock {
+      margin-left: 10px;
+      &::before {
+        border-right-color: black;
+        border-left: none;
+        right: 100%;
+      }
+      &::after {
+        border-right-color: white;
+        border-left: none;
+        right: calc(100% - 1px);
+      }
+    }
+    &.position-twoClock {
+      &::before, &::after {
+        transform: translateY(-50%);
+        top: 1.2em;
+      }
+    }
+    &.position-threeClock {
+      &::before, &::after {
+        transform: translateY(-50%);
+        top: 50%;
+      }
+    }
+    &.position-fourClock {
+      &::before, &::after {
+        transform: translateY(50%);
+        bottom: 1.2em;
+      }
+    }
+    &.position-fiveClock, &.position-sixClock, &.position-sevenClock{
+      margin-top: 10px;
       &::before {
         border-top: none;
         border-bottom-color: black;
@@ -190,13 +235,24 @@
         bottom: calc(100% - 1px);
       }
     }
-    &.position-left {
+    &.position-fiveClock {
+      &::before, &::after {
+        right: 1.2em;
+      }
+    }
+    &.position-sixClock {
+      &::before, &::after {
+        left: calc(50% - .6em);
+      }
+    }
+    &.position-sevenClock {
+      &::before, &::after {
+        left: 1.2em;
+      }
+    }
+    &.position-eightClock, &.position-nineClock, &.position-tenClock{
       transform: translateX(-100%);
       margin-left: -10px;
-      &::before, &::after {
-        transform: translateY(-50%);
-        top: 50%;
-      }
       &::before {
         border-left-color: black;
         border-right: none;
@@ -208,21 +264,22 @@
         left: calc(100% - 1px);
       }
     }
-    &.position-right {
-      margin-left: 10px;
+    &.position-eightClock {
+      &::before, &::after {
+        transform: translateY(50%);
+        bottom: 1.2em;
+      }
+    }
+    &.position-nineClock {
       &::before, &::after {
         transform: translateY(-50%);
         top: 50%;
       }
-      &::before {
-        border-right-color: black;
-        border-left: none;
-        right: 100%;
-      }
-      &::after {
-        border-right-color: white;
-        border-left: none;
-        right: calc(100% - 1px);
+    }
+    &.position-tenClock {
+      &::before, &::after {
+        transform: translateY(-50%);
+        top: 1.2em;
       }
     }
   }
