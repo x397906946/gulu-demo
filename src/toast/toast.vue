@@ -101,6 +101,10 @@
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
+    &:hover {
+      background: black;
+      border-radius: 4px
+    }
     &.position-top {
       top: 0;
       .toast{
@@ -133,6 +137,7 @@
       padding: 8px 0;
     }
     .close{
+      cursor: pointer;
       padding-left: 16px;
       flex-shrink: 0;
     }

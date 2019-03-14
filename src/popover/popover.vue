@@ -94,9 +94,9 @@
           twoClock: {top: top + window.scrollY , left: left + window.scrollX + width},
           threeClock: {top: top + window.scrollY + (height - height2) / 2, left: left + window.scrollX + width},
           fourClock: {top: top + window.scrollY + height - height2, left: left + window.scrollX + width},
-          fiveClock: {top: top + height + window.scrollY, left: left + window.scrollX + width - width2},
+          fiveClock: {top: top + height + window.scrollY, left: left + window.scrollX},
           sixClock: {top: top + height + window.scrollY, left: left + window.scrollX + (width - width2) / 2},
-          sevenClock: {top: top + height + window.scrollY, left: left + window.scrollX},
+          sevenClock: {top: top + height + window.scrollY, left: left + window.scrollX + width - width2},
           eightClock: {top: top + window.scrollY + height - height2, left: left + window.scrollX},
           nineClock: {top: top + window.scrollY + (height - height2) / 2, left: left + window.scrollX},
           tenClock: {top: top + window.scrollY, left: left + window.scrollX}
@@ -237,7 +237,7 @@
     }
     &.position-fiveClock {
       &::before, &::after {
-        right: 1.2em;
+        left: 1.2em;
       }
     }
     &.position-sixClock {
@@ -247,7 +247,7 @@
     }
     &.position-sevenClock {
       &::before, &::after {
-        left: 1.2em;
+        right: 1.2em;
       }
     }
     &.position-eightClock, &.position-nineClock, &.position-tenClock{

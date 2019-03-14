@@ -1,4 +1,4 @@
-# 轱辘 - 利用Vue制作的简易UI框架
+# 咕噜 - 利用Vue制作的简易UI框架
 
 [![Build Status](https://www.travis-ci.org/x397906946/gulu-demo.svg?branch=master)](https://www.travis-ci.org/x397906946/gulu-demo)
 
