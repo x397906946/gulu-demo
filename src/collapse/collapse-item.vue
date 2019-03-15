@@ -1,6 +1,6 @@
 <template>
   <div class="collapseItem">
-    <div class="title" @click="toggle">
+    <div class="title" :class="isActive" @click="toggle">
       {{title}}
     </div>
     <div class="content" v-if="open">
@@ -37,6 +37,13 @@
         }
       })
     },
+    computed: {
+      isActive(){
+        return {
+          active: this.open
+        }
+      }
+    },
     methods:{
       toggle(){
         if(this.open) {
@@ -61,6 +68,12 @@
       display: flex;
       align-items: center;
       padding: 0 8px;
+      &:hover {
+        background: rgba(0,0,0,.1);
+      }
+      &.active {
+        font-weight: bold;
+      }
     }
     &:first-child {
       > .title {
@@ -76,6 +89,8 @@
     }
     > .content {
       padding: 8px;
+      color: white;
+      background: #999;
     }
   }
 </style>
